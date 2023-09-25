@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My first page</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        p {
+            background-color: aqua;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
     <header>
         LOGO
-        <h1>MY FIRST PAGE</h1>
+        <h1 style="color:chocolate; font-family: cursive;">MY FIRST PAGE</h1>
         <nav>
             <ul>
-                <li>Home</li>
+                <li><a href="./home.html">Home</a></li>
                 <li>About</li>
-                <li>Contact</li>
+                <li><a href="http://www.sfu.ca/~bobbyc">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -26,14 +33,15 @@
                 more info <br>
                 more info 
             </details>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus eros accumsan sem malesuada imperdiet. Vivamus vitae odio ultricies, dictum nunc in, euismod lectus. Proin at nisl vitae nunc tincidunt elementum id vitae sapien. Mauris a libero arcu. Suspendisse rhoncus, nisi tristique viverra bibendum, mi enim tempor velit, non maximus metus quam ut leo. Duis ac facilisis nunc, vitae egestas arcu. In bibendum massa eget lobortis consequat.</p>
+            <p class="imp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus eros accumsan sem malesuada imperdiet. Vivamus vitae odio ultricies, dictum nunc in, euismod lectus. Proin at nisl vitae nunc tincidunt elementum id vitae sapien. Mauris a libero arcu. Suspendisse rhoncus, nisi tristique viverra bibendum, mi enim tempor velit, non maximus metus quam ut leo. Duis ac facilisis nunc, vitae egestas arcu. In bibendum massa eget lobortis consequat.</p>
+            <p>test</p>
         </section>
         <section>
             <h3>Section 2</h3>
-            <p>
+            <p id="second">
                 Etiam tincidunt purus et malesuada aliquet. Aliquam lobortis lobortis mi, sit amet vehicula tortor accumsan et. Ut nec tincidunt purus. Donec lectus lorem, sollicitudin quis dictum nec, dapibus et lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam eleifend tortor est, vitae mollis mauris sodales non. Nullam id pretium diam. Donec arcu dolor, consequat et pulvinar eget, ultricies et nibh. Fusce auctor, felis vitae lobortis egestas, diam eros rhoncus mi, egestas accumsan tortor ex eu leo. Duis placerat sollicitudin justo vel dictum. Ut mollis et purus eget finibus. Duis a metus sed erat dictum tincidunt.
             </p>
-            <p>
+            <p class="imp">
                 Sed <img src="./img/baby/image.jpg" alt="a baby smiling"> fermentum id justo ac gravida. Fusce tincidunt enim accumsan mauris finibus laoreet. Mauris maximus sit amet lorem et egestas. Quisque vitae luctus sem, non commodo nisl. Fusce vestibulum massa et ante vestibulum, sed tincidunt ex suscipit. Morbi ultricies quam non purus vulputate faucibus. Sed laoreet, enim ac maximus luctus, nisi sapien accumsan orci, et ullamcorper ipsum nisi eu nunc. Mauris cursus lorem in massa blandit, vel suscipit diam condimentum. Mauris tristique id nunc vel sollicitudin. Aliquam mollis lacinia nibh eget lacinia. Pellentesque in ultrices risus. Duis congue dolor semper est pulvinar, eget faucibus felis consectetur. Integer cursus, ipsum ac pulvinar ornare, mi metus facilisis nulla, ut pretium ante dolor eu mauris. Etiam ex justo, maximus non fermentum a, eleifend et nulla.
             </p>
         </section>
@@ -55,21 +63,33 @@
                 <td>4</td>
                 <td>5</td>
                 <td>6</td>
-                <td>7</td>
+              
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+              
             </tr>
         </table>
-        <form action="">
+        <form action="https://url">
             <fieldset>
                 <legend>Registration</legend>
                 <input type="text" placeholder="Name"> <br>
                 <input type="color"> <br>
                 <input type="password"> <br>
                 <input type="email"> <br>
-                <select> 
+                <input list="langs">
+                <datalist id="langs">
                     <option value="JS">JS</option>
                     <option value="HTML">HTML</option>
                     <option value="CSS">CSS</option>
-                </select> <br>
+                </datalist> <br>
                 <input type="submit" value="SuBmIt">
             </fieldset>
         </form>
