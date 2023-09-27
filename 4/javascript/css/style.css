@@ -1,0 +1,114 @@
+/* p.imp {
+    color: #A3905B;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header {
+    border: red dotted 2px;
+}
+#second {
+    color:red;
+    font-size: 1.5em;
+} */
+
+/* attributes */
+
+[alt ~= 'baby'] {
+    border: 1px solid black;
+}
+
+/* pseudoclass */
+
+p::first-line {
+    color: red;
+}
+p::first-letter {
+    font-size: 3em;
+}
+tr:nth-of-type(2n+1){
+    background-color: rgb(189, 188, 188);
+}
+a:hover {
+    color: orange;
+}
+a:active {
+    color: aliceblue;
+}
+
+/* tables */
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 50vw;
+}
+td, th {
+    border: 1px solid black;
+}
+
+/* context */
+
+h3:hover+p {
+    font-size: 3em;
+}
+
+/* position */
+
+/* img {
+    position: fixed;
+    left: 100px;
+    top: 50px;
+} */
+
+/* float */
+
+p {
+    width: 30vw;
+    float: left;
+}
+
+#s2, aside {
+    clear: left;
+}
+
+/* flex */
+
+div#flex {
+    display:flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+div div {
+    border: 1px solid black;
+    box-sizing: border-box;
+    flex: 33%;
+    background-color: bisque;
+}
+
+/* media queries */
+
+@media only screen and (max-width:480px) {
+    header {
+        height: 500px;
+        border: 3px dotted red;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width:680px){
+    header {
+        height: 300px;
+        border: 1px solid black;
+    }
+}
+
+h1.anim {
+    border: 1px solid red;
+    width: 500px;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+h1.anim:hover {
+    width: 700px;
+    opacity: 0.5;
+}
