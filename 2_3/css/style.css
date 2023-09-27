@@ -100,3 +100,15 @@ div div {
         border: 1px solid black;
     }
 }
+
+h1.anim {
+    border: 1px solid red;
+    width: 500px;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+h1.anim:hover {
+    width: 700px;
+    opacity: 0.5;
+}
