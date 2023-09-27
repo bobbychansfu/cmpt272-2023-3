@@ -50,3 +50,53 @@ td, th {
 h3:hover+p {
     font-size: 3em;
 }
+
+/* position */
+
+/* img {
+    position: fixed;
+    left: 100px;
+    top: 50px;
+} */
+
+/* float */
+
+p {
+    width: 30vw;
+    float: left;
+}
+
+#s2, aside {
+    clear: left;
+}
+
+/* flex */
+
+div#flex {
+    display:flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+div div {
+    border: 1px solid black;
+    box-sizing: border-box;
+    flex: 33%;
+    background-color: bisque;
+}
+
+/* media queries */
+
+@media only screen and (max-width:480px) {
+    header {
+        height: 500px;
+        border: 3px dotted red;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width:680px){
+    header {
+        height: 300px;
+        border: 1px solid black;
+    }
+}
