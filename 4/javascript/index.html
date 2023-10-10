@@ -11,7 +11,7 @@
             border: 1px solid black;
         }
     </style>
-    <script type="text/javascript" src="./js/script1.js"></script>
+    <script type="text/javascript" src="./js/script1.js" defer></script>
 </head>
 <body>
     <header>
@@ -91,15 +91,16 @@
                 <input type="color"> <br>
                 <input type="password"> <br>
                 <input type="email"> <br>
-                <input list="langs">
+                <input type="text" list="langs">
                 <datalist id="langs">
                     <option value="JS">JS</option>
                     <option value="HTML">HTML</option>
                     <option value="CSS">CSS</option>
                 </datalist> <br>
-                <input type="submit" value="SuBmIt">
+                <input id="sub" type="submit" value="SuBmIt">
             </fieldset>
         </form>
+        <div id="output"></div>
     </main>
     <footer>
         links
