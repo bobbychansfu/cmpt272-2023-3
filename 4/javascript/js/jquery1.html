@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./jquery.min.js"></script>
+    
+  </head>
+  <body>
+    <button id="mybutt" onclick="addstuff()">Add/Remove stuff</button>
+    <div id="mydiv">
+
+    </div>
+    <script>
+      function addstuff() {
+        var kids = $(".k");
+        if (!kids.length) {
+          for (var i = 0; i < 10; i++) // for i in range(10)
+            $('#mydiv').append('<div class="k">'+i+'</div>');
+        } else {
+          kids.remove();
+        }
+      }
+    </script>
+  </body>
+</html>

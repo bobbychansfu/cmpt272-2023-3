@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><head>
+<script src="jquery.min.js"></script>
+</head><body>
+<button id="clickme" onclick="startAjax()">Click me</button>
+<div id="mydiv">
+</div>
+<div>
+  <button id="displayInfo" onclick="display()">Display</button>
+  <div id="mydiv2"></div>
+</div>
+<script>
+function startAjax() {
+  $("#clickme").text("Calling worldtime server");
+  $.ajax({url: "http://worldtimeapi.org/api/timezone/Pacific/Easter",
+     dataType: "json",
+     success:callbackFunction,
+     error:errorFunction
+  });
+}
+function callbackFunction(data,status) {
+  $("#mydiv").text("result: "+data.utc_datetime);
+  $("#clickme").text("Click me");
+}
+function errorFunction(jqXHR,error) {  // jxXHR - object includes status
+  $("#mydiv").text("error occurred: "+ jqXHR.status);
+}
+
+sessionStorage.setItem("TodaysDate", new Date());
+sessionStorage.firstName = "Hamlet";
+localStorage.UserName = "bobbyc";
+
+function display() {
+  var today = sessionStorage.getItem("TodaysDate");
+  var fn = sessionStorage.firstName;
+  var user = localStorage.UserName;
+  $("#mydiv2").html("<b>"+user+"</b>")
+}
+
+</script>
+</body></html>

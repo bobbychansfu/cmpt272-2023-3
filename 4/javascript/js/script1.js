@@ -94,3 +94,28 @@ function clicking(event){
 
 var button = document.getElementById("sub")
 button.onclick = clicking
+
+var button2 = document.querySelector("button")
+// button2.onclick = function(evt) {console.log("hello")}
+// button2.onclick = function(evt) {console.log("world")}
+
+button2.addEventListener('click', clicking,
+    {capture:false})
+button2.addEventListener('click',function(evt) {
+    console.log("world")},
+    {capture:true})
+
+function remove() {
+    button2.removeEventListener('click',clicking)
+}
+
+// window.addEventListener('keypress', function(event){
+//     console.log(event.key)
+// })
+
+document.querySelector("input:nth-of-type(1)").addEventListener(
+    'change',
+    function(event){
+        console.log("hello world")
+    }
+)
