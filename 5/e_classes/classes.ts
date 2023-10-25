@@ -1,20 +1,45 @@
-class Person1 {
-    name: string
-    age?: number
-    password: string
+interface hasCoord {
+    x: number
+}
+/*
+interface hasStrength {
+    strength:number,
+    ability:string
+}
+*/
+//abstract 
+class Person implements hasCoord {
+    x:number
     static totalPeople = 0
-    constructor(n:string,p:string,a?:number){
-        this.name= n
-        this.password = p
-        this.age = a
-        Person1.totalPeople++
+    constructor(public name:string,private password:string,x:number,protected age:number){
+        this.x = x
+        Person.totalPeople++
+    }
+    usesPwd() {
+        var p = this.password
     }
 }
 
-var p1 = new Person1('bobby','1234',42)
-var p2 = new Person1('steve','1234',42)
-var p3 = new Person1('jane','1234',42)
-var p4 = new Person1('jenny','1234')
-console.log(Person1.totalPeople)
+class Student extends Person {
+    sn:string
+    constructor(name:string, pw: string, x: number, a: number, sn:string, public gpa:number){
+        super(name,pw,x,a)
+        this.sn = sn
+    }
+    myfunc() {
+        var aa = this.age // valid
+    }
+}
+
+class Teacher extends Person {
+
+}
+
+var p1 = new Person('bobby','1234',6,42)
+var p2 = new Person('steve','1234',6,42)
+var p3 = new Person('jane','1234',6,42)
+console.log(Person.totalPeople)
+var s1 = new Student('jay','1234',6,24,'12345678',3.4)
+// console.log(p1.password)
 
 
