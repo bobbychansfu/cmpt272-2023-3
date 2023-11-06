@@ -1,0 +1,10 @@
+<p>
+    Name: {{ person.name }} <br>
+    Added on: <span [textContent]="person.added_on"></span> <br>
+    Instructor: {{ person.instructor }} <br>
+    <button 
+        class="btn btn-outline-danger"
+        (click)="onDelete($event,person.name)"
+    >DELETE</button> <br>
+    <button class="btn btn-outline-primary">EDIT</button>
+</p>
