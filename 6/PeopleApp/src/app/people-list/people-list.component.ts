@@ -13,12 +13,12 @@ export class PeopleListComponent {
     this.people = [
       {
         name: 'john',
-        instructor: true,
+        instructor: false,
         added_on: new Date().getTime()
       },
       {
         name: 'bobby',
-        instructor: true,
+        instructor: false,
         added_on: new Date().getTime()
       },
       {
