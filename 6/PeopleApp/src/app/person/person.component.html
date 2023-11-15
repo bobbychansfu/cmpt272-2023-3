@@ -3,7 +3,7 @@
     [ngClass]="{ 'inst-style':person.instructor }"
 >
     Name: {{ person.name }} <br>
-    Added on: <span [textContent]="person.added_on"></span> <br>
+    Added on: <span [textContent]="person.added_on | date"></span> <br>
     Instructor: <span *ngIf="person.instructor; then ins else notins"></span> <br>
     <ng-template #ins>&check;</ng-template>
     <ng-template #notins><b>X</b></ng-template>
