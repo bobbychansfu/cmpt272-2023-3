@@ -1,0 +1,42 @@
+<form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit(form.value)"
+>
+    <fieldset
+        class="d-grid gap-2 col-12"
+    >
+        <legend>ADD PERSON</legend>
+        <input 
+            type="text"
+            name="name"
+            placeholder="NAME"
+            formControlName="name"
+        >
+        <input 
+            type="number"
+            name="age"
+            formControlName="age"
+            placeholder="AGE"
+        >
+        <div class="form-check">
+            <input 
+                type="checkbox"
+                name="instructor_checkbox"
+                id="instructor_checkbox"
+                formControlName="instructor"
+                class="form-check-input"
+            >
+            <label class="form-check-label" for="instructor_checkbox">
+                Instructor
+            </label>
+        </div>
+
+        <button 
+            class="btn btn-outline-primary"
+            [disabled]="!form.valid"
+        >
+            SAVE
+        </button>
+    </fieldset>
+    
+</form>

@@ -1,3 +1,7 @@
+<a routerLink="/person/add">ADD A NEW PERSON</a>
+
+<br>
+
 SEARCH <input type="text" [(ngModel)]="query"> {{ query }}
 <p>
     Number of people: {{ people | search:query | countPeople }}
@@ -8,3 +12,6 @@ SEARCH <input type="text" [(ngModel)]="query"> {{ query }}
     [person]="p"
     (delete)="onPersonDelete($event)"
 ></app-person>
+
+<!-- <app-person-add-form></app-person-add-form> -->
+

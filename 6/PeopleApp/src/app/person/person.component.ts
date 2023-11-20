@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-person',
@@ -9,7 +10,7 @@ export class PersonComponent {
   @Input() person:any
   @Output() delete = new EventEmitter()
 
-  constructor(){
+  constructor(private router: Router){
     // this.person = {
     //   name: 'bobby',
     //   instructor: true,
@@ -21,5 +22,9 @@ export class PersonComponent {
     //console.log(evt)
     // send it to the parent component
     this.delete.emit(evt)
+  }
+
+  onEdit(){
+    this.router.navigate(['/person',this.person.name])
   }
 }
