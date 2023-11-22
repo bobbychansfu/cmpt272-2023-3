@@ -11,13 +11,13 @@ export class AppComponent implements OnInit {
   i = new Date().getTime()
   constructor(private http: HttpClient){}
   ngOnInit(): void {
-    this.http.get('https://272.selfip.net/apps/mOoGQltV5b/collections/people/documents/')
+    this.http.get('https://272.selfip.net/apps/your_app_ID/collections/people/documents/')
       .subscribe((data)=>{
         console.log(data);
       })
   }
   add(){
-    this.http.post('https://272.selfip.net/apps/mOoGQltV5b/collections/people/documents/',{
+    this.http.post('https://272.selfip.net/apps/your_app_ID/collections/people/documents/',{
       "key": this.i.toString(),
       "data":"bobby"
     }).subscribe(
